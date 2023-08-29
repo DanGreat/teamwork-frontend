@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
-import { SignInComponent } from './sign-in.component';
+import { RouterModule, Routes } from '@angular/router';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 const routes: Routes = [
   {
@@ -16,10 +16,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    SignInComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
   ]
 })
-export class SignInModule { }
+export class AuthModule { }
